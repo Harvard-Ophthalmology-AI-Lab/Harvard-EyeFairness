@@ -139,3 +139,17 @@ To run the experiments with the proposed FIS on the task of glaucoma detection, 
 ```
 ./scripts/train_glaucoma_fis.sh
 ```
+
+## Acknowledgement & Citation
+
+
+If you find this repo useful for your research, please consider citing our [paper](https://arxiv.org/abs/2310.02492):
+
+```bibtex
+@misc{Luo_arXiv_2023,
+      title={Harvard Eye Fairness: A Large-Scale 3D Imaging Dataset for Equitable Eye Diseases Screening and Fair Identity Scaling}, 
+      author={Yan Luo, Yu Tian, Min Shi, Tobias Elze, Mengyu Wang}
+      year={2023},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
