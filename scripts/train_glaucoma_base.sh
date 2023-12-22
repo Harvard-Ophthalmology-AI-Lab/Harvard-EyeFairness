@@ -1,5 +1,5 @@
 #!/bin/bash
-DATASET_DIR=/PATH/TO/EyeFairness
+DATASET_DIR=/shared/ssd_30T/luoy/project/python/datasets/harvard/Harvard-EF30K/
 RESULT_DIR=.
 MODEL_TYPE=( efficientnet ) # Options: efficientnet | vit | resnet | swin | vgg | resnext | wideresnet | efficientnetv1 | convnext
 NUM_EPOCH=10
@@ -20,7 +20,7 @@ fi
 PERF_FILE=${MODEL_TYPE}_${MODALITY_TYPE}_${ATTRIBUTE_TYPE}.csv
 
 python ./scripts/train_glaucoma_fair.py \
-		--data_dir ${DATASET_DIR}/AMD/ \
+		--data_dir ${DATASET_DIR}/Glaucoma/ \
 		--result_dir ${RESULT_DIR}/results/glaucoma_${MODALITY_TYPE}_${ATTRIBUTE_TYPE}/${MODEL_TYPE}_${MODALITY_TYPE}_lr${LR}_bz${BATCH_SIZE} \
 		--model_type ${MODEL_TYPE} \
 		--image_size 200 \
