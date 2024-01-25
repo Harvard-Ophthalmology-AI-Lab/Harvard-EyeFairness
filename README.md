@@ -28,7 +28,7 @@ EyeFairness
 │   └── val
 └── glaucoma_meta.csv
 ```
-The "train/val/test" directories contain two types of data: SLO fundus photos and NPZ files that store OCT B-scans, SLO fundus photos, and additional attributes. SLO fundus photos serve visual inspection purposes, while the copies in NPZ files eliminate the need for the dataloader to access any other files except the NPZ files. The naming convention for SLO fundus photos follows the format "slo_xxxxxxx.jpg," and for NPZ files, it is "data_xxxxxx.npz," where "xxxxxx" (e.g., 006691) represents a unique numeric ID.
+The "train/val/test" directories contain two types of data: SLO fundus photos and NPZ files that store OCT B-scans, SLO fundus photos, and additional attributes. SLO fundus photos serve visual inspection purposes, while the copies in NPZ files eliminate the need for the dataloader to access any other files except the NPZ files. The naming convention for SLO fundus photos follows the format "slo_xxxxxx.jpg," and for NPZ files, it is "data_xxxxx.npz," where "xxxxx" (e.g., 06691) represents a unique numeric ID. The dimensions of SLO fundus photos in NPZ files are 200 x 200, whereas those in the train/val/test folders are 512 x 664. The SLO fundus photos in NPZ files are created by resizing the photos in the folders and then normalizing them to [0, 255].
 
 NPZ files have the following keys. 
 
@@ -40,6 +40,8 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
+maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+language: 0 - English, 1 - Spanish, 2 - Others
 ```
 The condition would be converted into the label of AMD by the condition-disease mapping.
 ```
@@ -62,6 +64,8 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
+maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+language: 0 - English, 1 - Spanish, 2 - Others
 ```
 The condition would be converted into the label of vision-threatening DR by the condition-disease mapping.
 ```
@@ -81,6 +85,8 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
+maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+language: 0 - English, 1 - Spanish, 2 - Others
 ```
 
 We put all the attributes associated with the 10,000 samples in a meta csv file for each disease, including race, gender, ethnicity, marital status, age, preferred language.
