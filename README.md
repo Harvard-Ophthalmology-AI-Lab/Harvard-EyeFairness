@@ -40,7 +40,7 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
-maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+maritalstatus: 0 - Married/Civil Union, Life Partner, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Legally Separated, and -1 - Unknown
 language: 0 - English, 1 - Spanish, 2 - Others
 ```
 The condition would be converted into the label of AMD by the condition-disease mapping.
@@ -64,7 +64,7 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
-maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+maritalstatus: 0 - Married/Civil Union, Life Partner, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Legally Separated, and -1 - Unknown
 language: 0 - English, 1 - Spanish, 2 - Others
 ```
 The condition would be converted into the label of vision-threatening DR by the condition-disease mapping.
@@ -85,7 +85,7 @@ slo_fundus: image of SLO fundus
 race: 0 - Asian, 1 - Black, 2 - White
 male: 0 - Female, 1 - Male
 hispanic: 0 - Non-Hispanic, 1 - Hispanic
-maritalstatus: 0 - Married, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Leg-Sep
+maritalstatus: 0 - Married/Civil Union, Life Partner, 1 - Single, 2 - Divorced, 3 - Widowed, 4 - Legally Separated, and -1 - Unknown
 language: 0 - English, 1 - Spanish, 2 - Others
 ```
 
