@@ -6,29 +6,29 @@ The dataset and code for the paper entitled *Harvard Eye Fairness: A Large-Scale
 
 The dataset can be accessed via this [link](https://drive.google.com/drive/folders/1sLX2O_0AlrjY6JmdKijiV1zducsOsd0m?usp=sharing). This dataset can only be used for non-commercial research purposes. At no time, the dataset shall be used for clinical decisions or patient care. The data use license is [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-Our dataset includes 10,000 subjects for Age-Related Macular Degeneration (AMD), Diabetic Retinopathy (DR), and glaucoma separately, totaling 30,000 subjects with comprehensive demographic identity attributes including age, gender, race, ethnicity, preferred language, and marital status. Each subject has one Scanning Laser Ophthalmoscopy (SLO) fundus photo and one sample of Optical Coherence Tomography (OCT) B-scans. The size of OCT B-scans is 200 x 200 x 200 in glaucoma, while the one of OCT B-scans. The size of OCT B-scans is 128 x 200 x 200 in AMD and DR. 
+Our dataset includes 10,000 subjects for Age-Related Macular Degeneration (AMD), Diabetic Retinopathy (DR), and glaucoma separately, totaling 30,000 subjects with comprehensive demographic identity attributes including age, gender, race, ethnicity, preferred language, and marital status. Each subject has one Scanning Laser Ophthalmoscopy (SLO) fundus photo and one sample of Optical Coherence Tomography (OCT) B-scans. The size of OCT B-scans is 200 x 200 x 200 in glaucoma. The size of OCT B-scans is 128 x 200 x 200 in AMD and DR. 
 
 The dataset has an approximate size of 600 GB. Upon downloading and extracting these datasets, you will find the dataset structure as follows.
 
 ```
 EyeFairness
 ├── AMD
-│   ├── test
-│   ├── train
-│   └── val
-├── amd_meta.csv
+│   ├── Training
+│   ├── Validation
+│   └── Test
+├── data_summar_amd.csv
 ├── DR
-│   ├── test
-│   ├── train
-│   └── val
-├── dr_meta.csv
+│   ├── Training
+│   ├── Validation
+│   └── Test
+├── data_summar_dr.csv
 ├── Glaucoma
-│   ├── test
-│   ├── train
-│   └── val
-└── glaucoma_meta.csv
+│   ├── Training
+│   ├── Validation
+│   └── Test
+└── data_summar_glaucoma.csv
 ```
-The "train/val/test" directories contain two types of data: SLO fundus photos and NPZ files that store OCT B-scans, SLO fundus photos, and additional attributes. SLO fundus photos serve visual inspection purposes, while the copies in NPZ files eliminate the need for the dataloader to access any other files except the NPZ files. The naming convention for SLO fundus photos follows the format "slo_xxxxxx.jpg," and for NPZ files, it is "data_xxxxx.npz," where "xxxxx" (e.g., 06691) represents a unique numeric ID. The dimensions of SLO fundus photos in NPZ files are 200 x 200, whereas those in the train/val/test folders are 512 x 664. The SLO fundus photos in NPZ files are created by resizing the photos in the folders and then normalizing them to [0, 255].
+Our dataset directories contain two types of data: SLO fundus photos and NPZ files that store OCT B-scans, SLO fundus photos, and additional attributes. SLO fundus photos serve visual inspection purposes, while the copies in NPZ files eliminate the need for the dataloader to access any other files except the NPZ files. The naming convention for SLO fundus photos follows the format "slo_xxxxx.jpg," and for NPZ files, it is "data_xxxxx.npz," where "xxxxx" (e.g., 07777) represents a unique numeric ID. The dimensions of SLO fundus photos in NPZ files are 200 x 200, whereas the SLO fundus photos in jpg format are 512 x 664. The SLO fundus photos in NPZ files are created by resizing the photos in the folders and then normalizing them to [0, 255].
 
 NPZ files have the following keys. 
 
@@ -89,7 +89,7 @@ maritalstatus: 0 - Married or Partnered, 1 - Single, 2 - Divorced, 3 - Widowed, 
 language: 0 - English, 1 - Spanish, 2 - Others
 ```
 
-We put all the attributes associated with the 10,000 samples in a meta csv file for each disease, including race, gender, ethnicity, marital status, age, preferred language.
+We put all the attributes associated with the 10,000 samples in a meta csv file for each disease, including age, gender, race, ethnicity, preferred language, and marital status.
 
 
 # Abstract
