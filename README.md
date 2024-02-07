@@ -45,15 +45,15 @@ language: 0 - English, 1 - Spanish, 2 - Others
 ```
 The condition would be converted into the label of AMD by the condition-disease mapping.
 ```
-condition_disease_mapping = {'not.in.icd.table': 0.,
-                        'no.amd.diagnosis': 0.,
+condition_disease_mapping = {'not.in.icd.table': 0,
+                        'no.amd.diagnosis': 0,
                         'early.dry': 1.,
-                        'intermediate.dry': 2.,
-                        'advanced.atrophic.dry.with.subfoveal.involvement': 3.,
-                        'advanced.atrophic.dry.without.subfoveal.involvement': 3.,
-                        'wet.amd.active.choroidal.neovascularization': 3.,
-                        'wet.amd.inactive.choroidal.neovascularization': 3.,
-                        'wet.amd.inactive.scar': 3.}
+                        'intermediate.dry': 2,
+                        'advanced.atrophic.dry.with.subfoveal.involvement': 3,
+                        'advanced.atrophic.dry.without.subfoveal.involvement': 3,
+                        'wet.amd.active.choroidal.neovascularization': 3,
+                        'wet.amd.inactive.choroidal.neovascularization': 3,
+                        'wet.amd.inactive.scar': 3}
 ```
 
 In the DR disease, the NPZ files have
